@@ -7,7 +7,6 @@ public abstract class BaseDisc {
     //Class variables
     private String discData;
     private HashMap<String, String> discInfo;
-    private boolean isInserted;
 
     private final int storageCapacityInMB;
     private final int spinSpeedInRPM;
@@ -16,7 +15,6 @@ public abstract class BaseDisc {
     public BaseDisc(int storageCapacity, int spinSpeed) {
         this.discData = "";
         this.discInfo = new HashMap<String, String>();
-        this.isInserted = false;
 
         this.storageCapacityInMB = storageCapacity;
         this.spinSpeedInRPM = spinSpeed;
@@ -31,7 +29,6 @@ public abstract class BaseDisc {
     }
 
     // methods
-    public boolean isInserted() { return this.isInserted; }
 
     public int getStorageCapacity() { return this.storageCapacityInMB; }
 
@@ -47,9 +44,5 @@ public abstract class BaseDisc {
 
     public HashMap<String, String> getInfo() {
         return this.discInfo;
-    }
-
-    public void Insert() {
-        this.isInserted = true;
     }
 }
